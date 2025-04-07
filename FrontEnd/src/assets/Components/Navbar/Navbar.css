@@ -10,6 +10,10 @@
     height: 80px !important;
 }
 
+
+
+
+
 /* Logo section */
 .nav_logo {
     cursor: pointer;
@@ -20,9 +24,17 @@
 
 .nav_logo p {
     color: #171717;
-    font-size: 40px;
+    font-size: 35px;
     font-weight: 600;
 }
+
+.nav_logo img {
+    width: 70px;
+}
+
+
+
+
 
 /* Navigation menu  */
 .nav_menu {
@@ -35,22 +47,37 @@
     font-weight: 500;
 }
 
-.nav_menu li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3px;
-    cursor: pointer;
+.list{
+    color: #626262;
 }
 
-.nav_menu hr {
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background-color: #ff4141;
+.nav_menu li {
+    position: relative;
+    padding-bottom: 5px;
 }
+
+.nav_menu li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #ff4141;
+    transition: width 0.3s ease;
+}
+
+.nav_menu li:hover::after {
+    width: 100%;
+}
+
+
+.activeLi .list{
+   
+    color: #000000 !important;
+}
+
+
 
 
 
