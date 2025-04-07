@@ -1,0 +1,105 @@
+/* Navbar main container */
+.navbar {
+    
+    font-weight: 100;
+    font-style: normal;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    height: 80px !important;
+}
+
+/* Logo section */
+.nav_logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav_logo p {
+    color: #171717;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+/* Navigation menu  */
+.nav_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav_menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav_menu hr {
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #ff4141;
+}
+
+
+
+
+/* Login and cart section */
+.nav_login_card {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav_login_card button {
+    padding: 15px 30px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 15px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+
+.nav_login_card button:active {
+    background: #f3f3f3;
+}
+
+.cart_icon_container {
+    position: relative;
+}
+
+.cart_icon_container img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav_cart_count {
+    position: absolute;
+    cursor: pointer;
+    top: -8px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
