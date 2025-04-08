@@ -26,8 +26,8 @@
     align-items: center;
     justify-content: space-between;
     background: white;
-    width: 700px;
-    height: 70px;
+    width: 600px;
+    height: 60px;
     border-radius: 80px;
     border: 1px solid #e3e3e3;
 }
@@ -38,15 +38,15 @@
     border: none;
     outline: none;
     color: #616161;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .newsletter button{
     width: 210px;
-    height: 70px;
+    height: 60px;
     border-radius: 80px;
     background-color: black;
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     cursor: pointer;
 }

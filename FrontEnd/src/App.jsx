@@ -6,6 +6,7 @@ import ShopCategory from './assets/Pages/ShopCategory'
 import Product from './assets/Pages/Product'
 import Card from './assets/Pages/Card'
 import LoginSignup from './assets/Pages/LoginSignup'
+import Footer from './assets/Components/Footer/Footer'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path='/login' element={<LoginSignup />} />
         </Routes>
 
+        <Footer/>
       </BrowserRouter>
     </>
   )
