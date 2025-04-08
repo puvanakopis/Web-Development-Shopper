@@ -1,6 +1,11 @@
 .item {
     width: 350px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .item p {
@@ -8,7 +13,7 @@
 }
 
 .item img {
-    width: 300px;
+    width: 320px;
     height: 380px;
 }
 
