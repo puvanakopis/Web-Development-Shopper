@@ -1,6 +1,5 @@
 .item {
     width: 350px;
-    cursor: pointer;
     transition: all 0.3s ease-in-out;
     display: flex;
     justify-content: center;
@@ -38,4 +37,13 @@
 .item:hover{
     transform: scale(1.05);
     transition: 0.6s;
+}
+
+.view{
+    background-color: #333333;
+    text-decoration: none !important;
+    color: white;
+    padding:5px 20px;
+    margin-top: 10px;
+    border-radius: 50px;
 }
