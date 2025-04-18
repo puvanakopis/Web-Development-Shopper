@@ -19,7 +19,7 @@ const Item = (props) => {
             </div>
 
 
-            <Link className='view' to={`/product/${props.id}`}>View</Link>
+            <Link className='view' to={`/product/${props.id}`} onClick={window.scrollTo(0,0)}>View</Link>
         </div>
     )
 }

@@ -1,0 +1,133 @@
+.cardItems {
+    margin: 60px 170px 150px 170px;
+}
+
+.cardItems hr {
+    height: 3px;
+    background-color: #e2e2e2;
+    border: 0;
+}
+
+
+
+
+
+/* Cart Header Row */
+.cartitem-form-main {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+/* Cart Items List */
+.cartitem-format {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.cartitem-product-icon {
+    height: 62px;
+}
+
+.cartItems-remove-icon {
+    width: 15px;
+    margin: 0 40px;
+    cursor: pointer;
+}
+
+.cartitem-quantity {
+    width: 64px;
+    height: 40px;
+    border: 2px solid #ebebeb;
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+
+
+/* Cart Summary Section */
+.cartitem-down {
+    display: flex;
+    margin: 100px 0px;
+}
+
+.cartitem-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+    width: 100%;
+    padding: 15px 0;
+}
+
+.Shipping {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cartitem-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitem-total button {
+    width: 260px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+/* Promo Code Section */
+.cartitems-promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cartitems-promocode p {
+    color: #555;
+}
+
+.cartitem-promobox {
+    width: 500px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 60px;
+    background: #eaeaea;
+}
+
+.cartitem-promobox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 330px;
+    height: 50px;
+}
+
+.cartitem-promobox button {
+    width: 170px;
+    height: 60px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
