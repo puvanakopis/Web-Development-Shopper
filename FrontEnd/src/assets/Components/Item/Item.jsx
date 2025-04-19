@@ -15,7 +15,7 @@ const Item = (props) => {
                 </div>
                 <div className="item-prices-old">
                     ${props.old_price}
-                </div>
+                </div> 
             </div>
 
 

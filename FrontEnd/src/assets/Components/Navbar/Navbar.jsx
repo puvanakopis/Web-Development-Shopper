@@ -1,9 +1,10 @@
 import './Navbar.css'
 import logo from './../Assets/Frontend_Assets/logo.png'
 import cart_icon from './../Assets/Frontend_Assets/cart_icon.png'
-import { useContext, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';
+import nav_dropdown from '../Assets/Frontend_Assets/nav_dropdown.png'
 
 
 const Navbar = () => {
@@ -11,6 +12,13 @@ const Navbar = () => {
     const [menu, setMenu] = useState('shop')
 
     const {getTotalCartItem} = useContext(ShopContext)
+
+    const menuRef = useRef()
+
+    const dropdown_toggle =(e)=>{
+        menuRef.current.classList.toggle('nav_menu-visible')
+        e.target.classList.toggle('open')
+    }
 
     return (
         <div className='navbar'>
@@ -22,7 +30,8 @@ const Navbar = () => {
             </div>
 
             {/* Navigation menu */}
-            <ul className="nav_menu">
+            <img className='nav-dropdown' onClick={dropdown_toggle} src={nav_dropdown} alt="" />
+            <ul ref={menuRef} className="nav_menu">
                 <li className={menu === 'shop' ? 'activeLi' : ''} onClick={() => { setMenu('shop') , window.scrollTo(0,0)}}> <Link className='list' to='/' style={{ textDecoration: 'none'  }}>Shop</Link>  </li>
                 <li className={menu === 'men' ? 'activeLi' : ''} onClick={() => { setMenu('men') }}> <Link className='list'  to='/men' style={{ textDecoration: 'none' }}>Men</Link> </li>
                 <li className={menu === 'women' ? 'activeLi' : ''} onClick={() => { setMenu('women') }}><Link className='list'  to='/women'  style={{ textDecoration: 'none' }}>Women</Link>  </li>
@@ -33,8 +42,9 @@ const Navbar = () => {
             <div className="nav_login_card">
                 <Link to='/login'><button>Log in</button></Link>
                 <div className="cart_icon_container">
-                    <Link to='/card'><img src={cart_icon} alt="Cart" /> </Link>
+                    <Link to='/card'><img src={cart_icon} alt="Cart" />
                     <div className='nav_cart_count'>{getTotalCartItem()}</div>
+                    </Link>
                 </div>
             </div>
         </div>

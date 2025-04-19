@@ -30,7 +30,7 @@ const CardItems = () => {
                 if (cartItems[e.id] > 0) {
                     return (
                         <div key={e.id}>
-                            <div className="cartitem-format cartitem-form-main">
+                            <div className="cartitem-format">
                                 <img src={e.image} alt="" className='cartitem-product-icon' />
                                 <p>{e.name}</p>
                                 <p>${e.new_price}</p>
