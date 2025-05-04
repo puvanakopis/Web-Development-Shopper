@@ -1,0 +1,261 @@
+/* Navbar main container */
+.navbar {
+    font-weight: 100;
+    font-style: normal;
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    height: 80px;
+    align-items: center;
+}
+
+
+
+
+
+/* Logo section */
+.nav_logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav_logo p {
+    color: #171717;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav_logo img {
+    width: 70px;
+}
+
+
+
+
+
+/* Navigation menu  */
+.nav_menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: #626262;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.list {
+    color: #626262;
+}
+
+.nav_menu li {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav_menu li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: #ff4141;
+    transition: width 0.3s ease;
+}
+
+.nav_menu li:hover::after {
+    width: 100%;
+}
+
+
+.activeLi .list {
+
+    color: #000000 !important;
+}
+
+
+
+
+
+
+/* Login and cart section */
+.nav_login_card {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.nav_login_card button {
+    padding: 15px 30px;
+    outline: none;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    color: #515151;
+    font-size: 15px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+
+.nav_login_card button:active {
+    background: #f3f3f3;
+}
+
+.cart_icon_container {
+    position: relative;
+}
+
+.cart_icon_container img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+}
+
+.nav_cart_count {
+    position: absolute;
+    cursor: pointer;
+    top: -8px;
+    right: -8px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 14px;
+    background: red;
+    color: white;
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+
+
+/* ----------------- For responsive ----------------- */
+@media (max-width:1280px) {
+    .navbar {
+        padding: 12px 50px;
+    }
+
+    .nav_logo img {
+        width: 40px;
+    }
+
+    .nav_logo p {
+        font-size: 25px;
+    }
+
+    .nav_menu {
+        gap: 30px;
+        font-size: 16px;
+    }
+
+    .nav_login_card {
+        gap: 30px;
+    }
+
+    .nav_login_card button {
+        width: 120px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .nav_cart_count {
+        margin-left: -40px;
+        font-size: 12px;
+    }
+}
+
+
+@media(max-width:1024px) {
+    .navbar {
+        padding: 12px 30px;
+    }
+
+    .nav_menu {
+        gap: 25px;
+        font-size: 14px;
+    }
+
+    .nav_login_card button {
+        width: 120px;
+        height: 35px;
+        font-size: 14px;
+        text-align: center;
+        line-height: normal;
+        padding: 10px 20px;
+
+    }
+
+    .nav_login_card img {
+        width: 30px;
+    }
+
+    .nav_cart_count {
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+
+@media (max-width:800px) {
+    .navbar {
+        padding: 10px 0;
+    }
+
+    .nav-dropdown {
+        display: block;
+        width: 40px;
+        height: 40px;
+        rotate: -90deg;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        transform: rotate(0deg);
+    }
+
+    .nav_menu {
+        display: none;
+        height: 80px;
+        width: 100%;
+        position: absolute;
+        background: white;
+        justify-content: center;
+        top: 100px;
+    }
+
+    .nav_menu-visible {
+        display: flex;
+    }
+
+    .nav-dropdown.open {
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width:500px) {
+    .navbar {
+        padding: 8px 0;
+        gap: 0;
+    }
+
+    .nav_logo {
+        transform: scale(0.8);
+    }
+
+    .nav_menu {
+        height: 70px;
+        top: 50px;
+    }
+
+    .nav_login_card {
+        transform: scale(0.8);
+    }
+}
